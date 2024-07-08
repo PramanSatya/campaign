@@ -2,7 +2,7 @@
 lock "~> 3.19.1"
 
 set :application, 'campaign'
-set :repo_url, 'git@github.com:PramanSatya/campaign.git' # Edit this to match your repository
+set :repo_url, 'https://github.com/PramanSatya/campaign' # Edit this to match your repository
 set :branch, :main #use `git rev-parse --abbrev-ref HEAD`.chomp for pick current branch
 set :deploy_to, '/home/deploy/campaign'
 set :pty, true
