@@ -12,7 +12,7 @@ gem "sprockets-rails"
 gem "mysql2"
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 4.3.9"
+gem "puma", ">= 5.0"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
@@ -53,11 +53,11 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-  gem 'capistrano', require: false
-  gem "capistrano3-puma", require: false
+  gem 'capistrano'
+  gem "capistrano3-puma"
   gem 'capistrano-rails', require: false
   gem 'capistrano-bundler', require: false
-  gem 'capistrano-rbenv', require: false
+  gem 'capistrano-rbenv'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
