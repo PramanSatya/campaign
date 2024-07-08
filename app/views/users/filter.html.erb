@@ -1,3 +1,9 @@
+<%= form_with url: "/users/filter", method: :get, data: {turbo: false} do |f| %>
+	<%= f.text_field :campaign_names, :placeholder => "Campaign Names" %>
+  <%= f.submit "Search" %>
+<% end %>
+
+<br>
 <h1>Filtered Users</h1>
 
 <%= render "users_list", article: @users %>
