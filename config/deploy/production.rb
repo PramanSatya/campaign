@@ -7,10 +7,9 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-# set :rails_env, 'production'
-# set :puma_env, fetch(:rack_env, fetch(:rails_env, 'production'))
-# set :bundle_flags, '--deployment'
-# server '3.6.244.33', user: 'ubuntu', roles: %w{web app db}
+set :rails_env, 'production'
+set :puma_env, fetch(:rack_env, fetch(:rails_env, 'production'))
+server '<production server public IP address>', user: 'deploy', roles: %w{web app db}
 
 
 

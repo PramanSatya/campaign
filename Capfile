@@ -4,9 +4,12 @@ require "capistrano/setup"
 # Include default deployment tasks
 require "capistrano/deploy"
 
-require 'capistrano/rails'
 require 'capistrano/bundler'
-require 'capistrano/rbenv'
+require 'capistrano/rvm'
+require 'capistrano/rails/assets' # for asset handling add
+require 'capistrano/rails/migrations' # for running migrations
+require 'capistrano/puma'
+install_plugin Capistrano::Puma
 
 # Load the SCM plugin appropriate to your project:
 #
@@ -18,9 +21,6 @@ require 'capistrano/rbenv'
 # or
 require "capistrano/scm/git"
 install_plugin Capistrano::SCM::Git
-
-require 'capistrano/puma'
-install_plugin Capistrano::Puma
 
 # Include tasks from other gems included in your Gemfile
 #
