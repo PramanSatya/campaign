@@ -9,7 +9,7 @@
 
 set :rails_env, 'production'
 set :puma_env, fetch(:rack_env, fetch(:rails_env, 'production'))
-server '<production server public IP address>', user: 'deploy', roles: %w{web app db}
+server '52.66.48.182', user: 'deploy', roles: %w{web app db}
 
 
 
