@@ -24,7 +24,15 @@ bundle exec rake db:create
 bundle exec rake db:setup
 ```
 
-##### 4. Start the Rails server
+##### 4. Install Gems
+
+Run the following command to install gems.
+
+```ruby
+bundle install
+```
+
+##### 5. Start the Rails server
 
 You can start the rails server using the command given below.
 
@@ -32,9 +40,15 @@ You can start the rails server using the command given below.
 bundle exec rails s
 ```
 
+And now you can visit the site with the URL http://localhost:3000
+
 NOTE - **There is a validation on the presence of name and email of user, make sure to give these values before hitting POST api**
 
-And now you can visit the site with the URL http://localhost:3000
+The app also contain some basic specs for model file which can be run by command:
+
+```ruby
+bundle exec rspec
+```
 
 
 ### EC2 Access
