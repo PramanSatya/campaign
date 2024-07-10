@@ -10,6 +10,7 @@ require 'capistrano/rails/assets' # for asset handling add
 require 'capistrano/rails/migrations' # for running migrations
 require 'capistrano/puma'
 install_plugin Capistrano::Puma
+install_plugin Capistrano::Puma::Systemd
 
 # Load the SCM plugin appropriate to your project:
 #
